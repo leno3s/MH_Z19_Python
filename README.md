@@ -1,5 +1,5 @@
 # MH\_Z19\_Python
-  Simple class can be used for reading CO2 concentration with MH-Z19 sensor.
+  Simple class can be used for reading CO2 concentration from MH-Z19 sensor.
 
 # Requirements
   * Python3.7
@@ -7,7 +7,7 @@
 
 # Usage
   1. Instantiate the class with the device file as a constructor parameter.
-  1. Call `connect()` method then call `get()`, which will returns CO2 concentration in ppm.
+  1. Call `connect()` method, then call `get()`, which will return CO2 concentration in ppm.
   1. After use, must be closed by `close()` method.
 
 For example with `with` statement:
