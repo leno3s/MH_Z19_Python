@@ -18,9 +18,13 @@ import datetime
 
 try:
     while True:
-        with mh_z19.MH_Z19("/dev/serial0") as con:
-            co2 = con.get()
-            print(str(datetime.datetime.today()) + "\t" + str(co2) + " ppm")
+        with mh_z19.Connection("/dev/serial0") as con:
+            data = con.get()
+            if data.validate():
+                print(str(datetime.datetime.today()) + "\t" + str(data.get()) + " ppm")
+            else:
+                print("Not valid.")
+                continue
             time.sleep(5)
 except KeyboardInterrupt:
     print("Interruption.")
