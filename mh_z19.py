@@ -2,7 +2,7 @@
 import serial
 import logging
 
-class Connection:
+class Connector:
 
     __GET = b"\xff\x01\x86\x00\x00\x00\x00\x00\x79"
     __ZERO_CALIB = b"\xff\x01\x87\x00\x00\x00\x00\x00\x78"

@@ -18,7 +18,7 @@ import datetime
 
 try:
     while True:
-        with mh_z19.Connection("/dev/serial0") as con:
+        with mh_z19.Connector("/dev/serial0") as con:
             data = con.get()
             if data.validate():
                 print(str(datetime.datetime.today()) + "\t" + str(data.get()) + " ppm")
